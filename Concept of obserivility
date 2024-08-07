@@ -1,0 +1,76 @@
+Azure Observability: 
+Observability is crucial for managing complex systems and applications, especially in cloud environments like Microsoft Azure. By providing comprehensive insights into the performance, health, and behavior of applications and infrastructure, observability helps organizations achieve several key benefits. 
+
+The ability to understand what's happening inside a system by looking at the output data. An observability solution helps you analyze this data to assess the system's health and find ways to fix problems in your IT infrastructure. 
+
+Observability can help your organization address numerous operational challenges to minimize downtime. 
+
+Azure provides its own built-in monitoring tools to help observe and manage applications and services, these tools are typically just the starting point for a comprehensive observability strategy. To achieve the best observability, organizations usually need to go beyond what Azure offers out-of-the-box. This often involves integrating additional tools and techniques to gain deeper insights, broader visibility across different environments. 
+
+ 
+While observability and monitoring complement each other, there's a notable distinction: 
+Monitoring: Collects information and informs you that it detected an issue based on you configuring it to monitor for those conditions. You're monitoring for known or predictable failures. 
+Observability: The ability to understand what's happening inside a system by looking at the output data. An observability solution helps you analyze this data to assess the system's health and find ways to fix problems in your IT infrastructure. 
+ 
+So before going out of box from Azure, Lets first have a brief on Azure built-in monitoring tools: Azure offers several built-in tools to help you monitor the data, but they have limitations  
+1. Azure Monitor: 
+Functionality: Azure’s primary monitoring tool, offered as a SaaS product. It Collects metrics from a wide range of Azure cloud services and resources. It provides basic visualization tools to interpret monitoring data, simplifying basic cloud infrastructure monitoring tasks. 
+Limitations: May not cover all non-Azure environments seamlessly, requiring additional customization. 
+2. Azure Application Insights: 
+Functionality: Extends Azure Monitor with features tailored for real-time Application Performance Monitoring (APM). 
+Limitations: Primarily focused on web applications, which limits its applicability for other types of applications. 
+ 
+3. Azure Log Analytics: 
+Functionality: Enables running log queries against log data collected by Azure Monitor. 
+Limitations: Managing and filtering large volumes of log data can be challenging; may not integrate easily with logs from non-Azure sources. 
+4.Azure Advisor: 
+Functionality: Provides recommendations to optimize workloads for performance, reliability, security, and cost-efficiency. 
+Limitations:  Azure Advisor is not a continuous monitoring application for individual workloads. 
+
+Limitations of Microsoft Azure observability tools: 
+
+Limited to Azure Workloads: Azure's monitoring tools focus only on monitoring applications and services hosted within Azure itself, excluding other public cloud platforms like Google Cloud Platform. This restricts their ability to provide unified observability across multicloud environments. 
+
+Varied Data Handling: Different Azure services report metrics and log data differently, leading to inconsistencies in data formats and ingestion intervals. This makes it difficult to integrate and analyze data comprehensively, especially across different parts of an application. 
+
+Limited Customization: While Azure Monitor offers some customization options such as custom visualizations, these options are limited and may not meet advanced customization needs. This can hinder flexibility in monitoring and alerting configurations. 
+
+Cost Considerations: Azure's monitoring solutions charge based on data ingestion and storage, which can lead to escalating costs as observability data volumes grow. Additionally, pricing details for services like Azure Advisor may not be transparent, requiring additional effort for cost management and planning. 
+ 
+
+Three pillars of observability: 
+1. Metrics: These are numerical values that represent the measurements of specific aspects of a system at a given point in time. They can include measurements like CPU usage, memory usage, network traffic, and more. 
+2. Tracing: This involves tracking individual requests or transactions as they flow through various components of a system. Tracing can help identify bottlenecks or failures in a complex system. 
+3. Logs: These are detailed records of events that have occurred within a system. Logs can provide valuable context for understanding problems when they occur. 
+These three pillars provide a comprehensive view of your system’s behavior and performance, helping you to detect, diagnose, and predict issues. 
+
+ 
+
+ 
+
+key metrics and aspects of Azure observability: 
+Key metrics, also known as Key Performance Indicators (KPIs), are quantifiable measurements that an organization uses to track and assess specific business processes. They serve as the raw data points that fuel the analytical engines of business intelligence systems, enabling organizations to derive meaningful insights, make informed decisions, and drive strategic initiatives. We can find below the key metrics of Azure Observability 
+
+ 
+
+Log Streaming: This allows you to view system and console logs from a container in near real-time. It’s useful for troubleshooting and understanding the behavior of your application. 
+
+Container Console: This feature lets you connect directly to the Linux console in your containers. It’s a powerful tool for debugging your application from inside the container. 
+
+Azure Monitor Metrics: This service provides compute and network usage data for your application. You can view and analyze this metric data to understand the performance and resource consumption of your application. 
+
+Application Logging: This involves collecting and analyzing log data from your application. It’s crucial for monitoring application performance, identifying issues, and debugging. 
+
+Azure Monitor Log Analytics: This is a service that lets you run queries to view and analyze your app’s system and application logs. It’s a powerful tool for understanding the behavior and performance of your applications. 
+
+Azure Monitor Alerts: This service allows you to create and manage alerts based on metric and log data. These alerts can notify you of specific events or conditions, helping you to respond quickly to issues. 
+
+ 
+In terms of application monitoring, especially for microservices applications, the most fundamental metrics are: 
+CPU Usage: This metric shows how much CPU resource your application is using. High CPU usage could indicate that your application is not efficiently using resources or that it’s under heavy load. 
+
+Memory Usage: This metric shows how much memory your application is using. High memory usage could indicate a memory leak or that your application needs more memory to operate efficiently. 
+
+Liveness Detection: This is a health check to determine if your application is running and able to accept requests. 
+
+Network Traffic: This metric shows the amount of data being sent and received by your application. High network traffic could indicate a high load or potential network-related issues. 
